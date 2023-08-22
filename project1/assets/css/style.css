@@ -458,13 +458,12 @@ a {
 }
 
 .stats .avatar-1 {
-  background-color: #1F3BB1;
-  color: #FFF;
+  background-color: #1f3bb1;
+  color: #fff;
   font-size: 0.7rem;
   font-weight: 450;
   letter-spacing: -0.145px;
 }
-
 
 .stats .img-block .image {
   display: block;
@@ -521,7 +520,7 @@ a {
 }
 
 .stats .qty-desc {
-  color: #7B8087;
+  color: #7b8087;
   margin-top: 22px;
   font-size: 1.8rem;
   font-weight: 500;
@@ -548,7 +547,7 @@ a {
 }
 
 .subscription .sub-title {
-  color: #FFF;
+  color: #fff;
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1.5;
@@ -557,7 +556,7 @@ a {
 
 .subscription .desc {
   margin-top: 15px;
-  color: #FFF;
+  color: #fff;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.88;
@@ -567,7 +566,7 @@ a {
 .subscription .btn {
   margin-top: 20px;
   min-width: 151px;
-  background: #FFF;
+  background: #fff;
   color: #002366;
 }
 
@@ -575,4 +574,63 @@ a {
   position: absolute;
   bottom: 0;
   right: 221px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 50px;
+  padding: 50px 0 58px;
+}
+
+.footer .row {
+  display: flex;
+}
+
+.footer .row-top {
+  gap: 185px;
+}
+
+.footer .heading {
+  color: #1c1c1d;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.footer .list,
+.footer .desc {
+  margin-top: 42px;
+}
+
+.footer .item {
+  margin-top: 18px;
+}
+
+.footer .item a,
+.footer .desc {
+  color: #7a7a7e;
+  font-size: 1.6rem;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.footer .desc {
+  white-space: normal;
+  line-height: 1.75;
+}
+
+.footer .social {
+  margin-top: 40px;
+}
+
+.footer .row-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 81px;
+}
+
+.footer .copyright {
+  color: #c2c2c2;
+  font-size: 1.4rem;
+  font-weight: 400;
 }
