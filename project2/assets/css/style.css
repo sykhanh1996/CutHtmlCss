@@ -106,7 +106,7 @@ a {
 
 /* Hero */
 .hero {
-  padding-top: 56px;
+  padding: 56px 0 65px;
   background: #fffcf4;
 }
 
@@ -125,6 +125,8 @@ a {
   height: 685px;
   object-fit: cover;
   border-radius: 20px;
+  /* vertical-align: bottom; */
+  display: block;
 }
 
 .hero-summary {
