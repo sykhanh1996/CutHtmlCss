@@ -421,8 +421,15 @@ a {
   background: #2e2100;
 }
 
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
 .feedback-item {
   display: flex;
+  width: 100%;
+  flex-shrink: 0;
 }
 
 .feedback-item .avatar {
@@ -433,19 +440,19 @@ a {
 }
 
 .feedback-item .info .title {
-  color: #f7f7f7;
   font-family: var(--font-heading);
-  font-size: 2.4rem;
+  margin-top: 18px;
   font-weight: 700;
-  line-height: 1.42; /* 141.667% */
+  font-size: 2.4rem;
+  line-height: 1.42;
+  color: #f7f7f7;
 }
 
 .feedback-item .info .desc {
   margin-top: 4px;
-  color: #bfbcb2;
   font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.86; /* 185.714% */
+  line-height: 1.86;
+  color: #bfbcb3;
 }
 
 .feedback-item .dots {
@@ -458,12 +465,12 @@ a {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #634700;
+  background: #634700;
   cursor: pointer;
 }
 
 .feedback-item .dot.active {
-  background-color: #ffb900;
+  background: #ffb900;
   cursor: default;
 }
 
@@ -474,9 +481,8 @@ a {
 
 .feedback-item blockquote {
   margin-left: 30px;
-  color: #fff;
-  font-size: 2.6rem;
   font-style: italic;
-  font-weight: 400;
-  line-height: 1.54; /* 153.846% */
+  font-size: 2.6rem;
+  line-height: 1.54;
+  color: #ffffff;
 }
