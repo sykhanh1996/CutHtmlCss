@@ -104,3 +104,37 @@ button {
   line-height: 1.88;
   color: #656689;
 }
+/* Header */
+.header {
+  padding: 26px 0;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__list {
+  display: flex;
+}
+
+.navbar__link,
+.header-action__link {
+  padding: 8px 18px;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 1;
+  color: #5e6085;
+}
+
+.navbar__link:hover {
+  color: #000958;
+  text-shadow: 1px 0 0 currentColor;
+}
+
+.header-action__btn {
+  --height: 50px;
+
+  min-width: 118px;
+}
