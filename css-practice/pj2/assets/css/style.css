@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #ffb900;
+  --font-heading: "Sen", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+/* Common */
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header */
+.header {
+  background: #fffcf4;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.nav {
+  margin-left: auto;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav a {
+  color: #171100;
+  padding: 8px 21px;
+  font-size: 1.6rem;
+  line-height: 1.75px; /* 175% */
+}
