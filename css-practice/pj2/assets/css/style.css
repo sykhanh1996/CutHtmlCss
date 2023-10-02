@@ -27,11 +27,30 @@ a {
   margin-right: auto;
 }
 
+.btn {
+  display: inline-block;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: #171100;
+  min-width: 118px;
+  height: 50px;
+  border-radius: 999px;
+  padding: 0 16px;
+  text-align: center;
+  line-height: 50px;
+}
+
 /* Header */
 .header {
   background: #fffcf4;
 }
 
+.header.fixed {
+  position: sticky;
+  top: -28px;
+  z-index: 1;
+}
 .header .body {
   display: flex;
   align-items: center;
@@ -47,8 +66,35 @@ a {
 }
 
 .nav a {
+  position: relative;
   color: #171100;
   padding: 8px 21px;
   font-size: 1.6rem;
   line-height: 1.75px; /* 175% */
+}
+
+.nav a:hover,
+.nav li.active a {
+  font-weight: 600;
+  color: #171100;
+}
+
+.nav li.active a::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  display: block;
+  width: 12px;
+  height: 2px;
+  background: #171100;
+  border-radius: 1px;
+  left: 21px;
+}
+
+.header .sign-up-btn {
+  min-width: 144px;
+}
+
+.header .action {
+  margin-left: 49px;
 }
