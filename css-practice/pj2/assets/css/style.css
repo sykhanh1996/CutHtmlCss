@@ -75,8 +75,9 @@ a {
 
 .nav a:hover,
 .nav li.active a {
-  font-weight: 600;
+  /* font-weight: 600; */
   color: #171100;
+  text-shadow: 1px 0 0 currentColor;
 }
 
 .nav li.active a::after {
