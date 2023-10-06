@@ -83,9 +83,61 @@
     />
     <meta name="theme-color" content="#ffffff" />
 
+    <!-- Embedded fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- Reset css -->
     <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="container">
+        <!-- Header Top -->
+        <div class="header-top">
+          <!-- Logo -->
+          <a href="#">
+            <span class="logo">
+              <span class="logo__circle"></span>
+              <span class="logo__text">
+                <span class="logo__brand">shine</span>
+                <span class="logo__brand logo__brand--small">smile</span>
+              </span>
+            </span>
+          </a>
+
+          <!-- Nav -->
+          <nav class="navbar">
+            <ul class="navbar__list">
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link navbar__link--active">Home</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">Services</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">About</a>
+              </li>
+              <li class="navbar__item">
+                <a href="#!" class="navbar__link">Doctors</a>
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Action -->
+          <div class="header-action">
+            <a href="#!" class="header-action__login">Log In</a>
+            <button class="btn header-action__signup">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </header>
+  </body>
 </html>
