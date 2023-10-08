@@ -63,7 +63,39 @@ a {
   font-size: 1.8rem;
   font-weight: 300;
   line-height: 1.67; /* 166.667% */
+  margin-top: 18px;
 }
+
+.control {
+  display: flex;
+  column-gap: 18px;
+}
+
+.control__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #575f66;
+  border: 1px solid #575f66;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  transition: 0.25s;
+  outline: none;
+}
+
+.control__btn:hover {
+  color: #fff;
+  border-color: #2e80ce;
+  background-color: #2e80ce;
+  cursor: pointer;
+}
+
+.control-next-icon {
+  rotate: 180deg;
+}
+
 /* Header */
 
 .header {
@@ -261,7 +293,6 @@ a {
 }
 
 .service__desc {
-  margin-top: 18px;
   max-width: 468px;
   margin: auto;
 }
@@ -388,4 +419,114 @@ a {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.75; /* 175% */
+}
+
+/* Feature */
+.feature {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.feature__inner {
+  display: flex;
+  align-items: center;
+  column-gap: 130px;
+}
+
+.feature__media {
+  width: 48%;
+}
+
+.feature__images {
+  position: relative;
+  padding: 0 58px 121px 0;
+}
+
+.feature__img {
+  width: 512px;
+  height: 370px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.feature__img:last-child {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 332px;
+  height: 370px;
+}
+
+.feature__cta {
+  margin-top: 38px;
+}
+
+/* Member */
+.member {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  align-items: center;
+}
+
+.member__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.member__cta {
+  margin-top: 38px;
+}
+
+.member-list {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 34px;
+  text-align: center;
+}
+
+.member-item {
+  cursor: pointer;
+}
+
+.member-item:hover .member-item__thumb {
+  transform: scale(1.1);
+}
+
+.member-item__img-bg {
+  padding-top: 28px;
+  background: #eaf6ff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.member-item__thumb {
+  display: block;
+  max-width: 100%;
+  height: 290px;
+  object-fit: cover;
+  transition: 0.25s;
+}
+
+.member-item__name {
+  margin-top: 12px;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #10375c;
+}
+
+.member-item__title {
+  font-weight: 300;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #575f66;
+}
+
+.member__control {
+  margin-top: 38px;
+  justify-content: center;
 }
