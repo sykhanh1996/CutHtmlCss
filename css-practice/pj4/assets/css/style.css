@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #ff5b2e;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  background: #fffaf5;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: inherit;
+  font-family: inherit;
+}
