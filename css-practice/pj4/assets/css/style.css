@@ -52,7 +52,34 @@ button {
   margin: 0 auto;
 }
 
+.btn {
+}
+
 /* Header */
 .header {
   padding: 26px 0;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__list {
+  display: flex;
+}
+
+.navbar__link {
+  padding: 8px 18px;
+  color: #5E6085;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1;
+  /* 100% */
+}
+
+.navbar__link:hover {
+  color: #000958;
+  text-shadow: 1px 0 0 currentColor;
 }
