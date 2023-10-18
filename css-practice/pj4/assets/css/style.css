@@ -53,6 +53,26 @@ button {
 }
 
 .btn {
+  --height: 56px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 130px;
+  border: 1px solid rgb(0, 9, 88, 0.7);
+  min-height: var(--height);
+  border-radius: 99px;
+  color: #000958;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4rem;
+  /* 100% */
+}
+
+.btn:hover{
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 /* Header */
@@ -70,7 +90,8 @@ button {
   display: flex;
 }
 
-.navbar__link {
+.navbar__link,
+.header-action__link  {
   padding: 8px 18px;
   color: #5E6085;
   font-size: 1.4rem;
@@ -81,5 +102,10 @@ button {
 
 .navbar__link:hover {
   color: #000958;
-  text-shadow: 1px 0 0 currentColor;
+}
+
+.header-action__btn {
+  --height: 50px;
+
+  min-width: 118px;
 }
