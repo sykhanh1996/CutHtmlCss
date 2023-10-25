@@ -70,7 +70,7 @@ button {
   /* 100% */
 }
 
-.btn:hover{
+.btn:hover {
   opacity: 0.9;
   cursor: pointer;
 }
@@ -91,9 +91,9 @@ button {
 }
 
 .navbar__link,
-.header-action__link  {
+.header-action__link {
   padding: 8px 18px;
-  color: #5E6085;
+  color: #5e6085;
   font-size: 1.4rem;
   font-weight: 500;
   line-height: 1;
@@ -109,3 +109,5 @@ button {
 
   min-width: 118px;
 }
+
+/* Hero */
