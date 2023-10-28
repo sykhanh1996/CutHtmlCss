@@ -797,3 +797,14 @@ button {
   line-height: 1;
   color: #000958;
 }
+.staff__cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.staff__cta {
+  min-width: 193px;
+  color: #ff5b2e;
+  border-color: currentColor;
+}
