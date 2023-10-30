@@ -3,7 +3,110 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== FAVICON ===============-->
+    <link
+      rel="shortcut icon"
+      href="assets/img/favicon.png"
+      type="image/x-icon"
+    />
+
+    <!--=============== BOXICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <title>Halloween</title>
   </head>
-  <body></body>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav-header">
+          <div class="nav__logo">
+            <a href="!#" class="nav__logo-link">
+              <img
+                src="./assets/img/logo.png"
+                alt="Halloween"
+                class="nav__logo-img"
+              />
+              Halloween</a
+            >
+            <img
+              src="./assets/img/nav-img.png"
+              alt="Halloween Spider"
+              class="nav__img"
+            />
+          </div>
+
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="bx bx-grid-alt"></i>
+          </div>
+        </div>
+
+        <div class="nav__menu">
+          <ul class="nav__list nav__list--hide">
+            <li class="nav__item">
+              <a href="!#" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item"><a href="!#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="!#" class="nav__link">Candy</a></li>
+            <li class="nav__item"><a href="!#" class="nav__link">New</a></li>
+            <a href="!#" class="btn menu-btn">Support</a>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main style="height: 5000px">
+      <!-- Home -->
+      <section class="home">
+        <div class="container">
+          <div class="home__list">
+            <!-- item 1 -->
+            <div class="home__item">
+              <div class="home__group">
+                <img
+                  src="./assets/img/home1-img.png"
+                  alt=""
+                  class="home__img"
+                />
+                <div class="home__indicator"></div>
+                <div class="home__details">
+                  <h4 class="home__details-title">The Labu “Reiza”</h4>
+                  <p class="home__details-desc">The Living Pumpkin</p>
+                </div>
+              </div>
+              <div class="home__data">
+                <h3 class="home__data-version">#1 Top Scariest Ghost</h3>
+                <h1 class="home__data-title">
+                  UOOOO <br />
+                  TRICK OR <br />
+                  TREAT!!
+                </h1>
+                <p class="section-desc">
+                  Hi, I'm Reiza, people call me "El Labu". I am currently trying
+                  to learn something new, building my own bike with parts made
+                  only in Malaysia.
+                </p>
+              </div>
+            </div>
+            <!-- item 2 -->
+            <div class="home__item">
+              <div class="home__content"></div>
+              <div class="home__data"></div>
+            </div>
+            <!-- item 3 -->
+            <div class="home__item">
+              <div class="home__content"></div>
+              <div class="home__data"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
