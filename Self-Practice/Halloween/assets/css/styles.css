@@ -5,13 +5,26 @@
     box-sizing: border-box;
 }
 
+input,
+textarea,
+select,
+button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
 /*=============== VARIABLES CSS ===============*/
 :root {
     /*========== Font and typography ==========*/
     --body-font: 'Poppins', sans-serif;
     --normal-font-size: 1.53rem;
     --header-height: 5.6rem;
-
+    --small-font-size: 1.3008rem;
+    --smaller-font-size: 1.2rem;
+    --biggest-font-size: 3.2rem;
+    --h1-font-size: 2.4rem;
+    --h2-font-size: 2rem;
+    --h3-font-size: 1.6rem;
 
     /*========== Colors ==========*/
     --hue: 14;
@@ -34,7 +47,7 @@
     --mb-0-25: .25rem;
     --mb-0-5: .5rem;
     --mb-0-75: .75rem;
-    --mb-1: 1rem;
+    --mb-1: 1.6rem;
     --mb-1-5: 2.4rem;
     --mb-2: 2rem;
     --mb-2-5: 2.5rem;
@@ -61,12 +74,61 @@ a {
     text-decoration: none;
 }
 
-.btn {
+h1, h2, h3, h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+}
+
+.nav-btn {
     border: 1px solid #fff;
     color: var(--title-color);
     padding: 1.2rem 2.4rem;
     border-radius: 4.8rem;
     cursor: pointer;
+}
+
+.btn {
+    --width: 150px;
+    --height: 55px;
+
+    display: inline-block;
+    padding: 1.6rem 2.8rem;
+    background-color: var(--first-color);
+    border-radius: 0.8rem;
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    transition: .3s;
+    max-width: var(--width);
+    max-height: var(--height);
+    line-height: 1.4rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 /* Layout */
@@ -79,7 +141,7 @@ a {
 /* Header */
 .header {
     width: 100%;
-    position: fixed;
+    position: sticky;
     background: var(--body-color);
     top: 0;
     left: 0;
@@ -137,10 +199,119 @@ a {
 
 /* Home */
 .home__list {
-    display: grid;
+    display: flex;
+    overflow: hidden;
 }
 
-.home__content {}
+.home__item {
+    display: grid;
+    width: 100%;
+    row-gap: 1.6rem;
+    flex-shrink: 0;
+}
+
+.home__group {
+    display: grid;
+    padding-top: 3.2rem;
+    position: relative;
+}
+
+.home__img {
+    height: 250px;
+    justify-self: center;
+}
+
+.home__indicator {
+    height: 8px;
+    width: 8px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    position: absolute;
+    position: absolute;
+    top: 11.2rem;
+    right: 3.2rem;
+}
+
+.home__indicator::before {
+    content: "";
+    height: 48px;
+    width: 1px;
+    background-color: var(--title-color);
+    position: absolute;
+    top: -4rem;
+    right: 45%;
+}
+
+.home__details-img {
+    position: absolute;
+    right: .8rem;
+}
+
+.home__details-title,
+.home__details-desc {
+    font-size: var(--small-font-size);
+    text-align: right;
+    margin-bottom: 6px;
+}
+
+.home__data-rank {
+    margin-bottom: var(--mb-1);
+    font-size: var(--h3-font-size);
+    text-transform: uppercase;
+}
+
+.home__data-title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-black);
+    line-height: 109%;
+    margin-bottom: var(--mb-1);
+}
+
+.home__description {
+    margin-bottom: var(--mb-1);
+    line-height: 2.2rem;
+}
+
+.home__cta-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home__btn-tracking {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 0.8rem;
+    color: var(--title-color);
+}
+
+.home-tracking__icon {
+    font-size: 2rem;
+}
+
+.home__btn-slider {
+    display: flex;
+    column-gap: 16px;
+    margin-top: var(--mb-1);
+    justify-content: center;
+    align-items: center;
+    transition: .3s opacity;
+    transform: translate3d(0,0,0);
+}
+
+.home__slider-dot {
+    width: 5px;
+    height: 5px;
+    background-color: var(--title-color);
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+
+.home__slider-dot--active{
+    width: 24px;
+    border-radius: 8px;
+}
 
 @media screen and (min-width: 767px) {
     .nav__list {
