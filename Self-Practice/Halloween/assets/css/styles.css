@@ -46,7 +46,7 @@ button {
 
     /*========== Margenes Bottom ==========*/
     --mb-0-25: 0.4rem;
-    --mb-0-5: .5rem;
+    --mb-0-5: .8rem;
     --mb-0-75: 1.2rem;
     --mb-1: 1.6rem;
     --mb-1-5: 2.4rem;
@@ -97,16 +97,27 @@ img {
     height: auto;
 }
 
+
+
 .section__title {
     font-size: var(--h2-font-size);
     margin-bottom: var(--mb-2);
     text-align: center;
 }
 
+.section-desc {
+    line-height: 1.4;
+}
+
 button {
     cursor: pointer;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
+}
+
+.button:hover {
+    background-color: var(--first-color-alt);
+
 }
 
 .section {
@@ -123,10 +134,10 @@ button {
 
 .btn {
     --width: 150px;
-    --height: 55px;
+    --height: 60px;
 
     display: inline-block;
-    padding: 1.6rem 2.8rem;
+    padding: 2.15rem 2.8rem;
     background-color: var(--first-color);
     border-radius: 0.8rem;
     color: var(--title-color);
@@ -138,6 +149,7 @@ button {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    vertical-align: middle;
 }
 
 /* Layout */
@@ -349,8 +361,166 @@ button {
     margin-bottom: var(--mb-0-25);
 }
 
-.category__desc {
-    line-height: 1.4;
+/* About */
+.about {
+    text-align: center;
+    display: grid;
+    row-gap: 3.2rem;
+}
+
+.about__desc {
+    margin-bottom: 3.2rem;
+}
+
+.about__img {
+    width: 200px;
+    justify-self: center;
+    animation: floating 2s ease-in-out infinite;
+}
+
+/* Trick */
+.trick__list {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.trick__item {
+    position: relative;
+    background: var(--container-color);
+    border-radius: 1.6rem;
+    padding: 2.4rem 0 1.6rem 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.trick__img {
+    width: 90px;
+    transition: .3s;
+}
+
+.trick__title,
+.trick__price {
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    font-size: var(--normal-font-size);
+    padding: 4px 0;
+}
+
+.trick__subtitle {
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-0-5);
+}
+
+.trick__button {
+    position: absolute;
+    display: inline-flex;
+    padding: 0.8rem;
+    border-radius: 0.4rem 0.4rem 0.12rem 0.4rem;
+    border: none;
+    align-items: center;
+    justify-content: center;
+    bottom: 0;
+    right: -4.8rem;
+    background-color: var(--first-color);
+    transition: .3s;
+
+}
+
+.trick__icon {
+    font-size: 2rem;
+    color: var(--title-color);
+}
+
+.trick__item:hover .trick__img {
+    transform: translateY(-.8rem);
+}
+
+.trick__item:hover .trick__button {
+    right: 0;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer__list {
+    display: grid;
+    overflow: hidden;
+    row-gap: 3.2rem;
+}
+
+.footer__logo {
+    display: flex;
+    align-items: center;
+    column-gap: .5rem;
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-medium);
+    color: var(--title-color);
+}
+
+.footer__logo-img {
+    width: 20px;
+}
+
+.footer__desc {
+    margin-bottom: var(--mb-2-5);
+}
+
+.footer__social {
+    display: flex;
+    column-gap: 1.2rem;
+}
+
+.footer__social-link {
+    display: flex;
+    column-gap: 1.2rem;
+    padding: .4rem;
+    border-radius: 0.4rem;
+    color: var(--title-color);
+    font-size: 1.6rem;
+}
+
+.footer__title {
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-1);
+}
+
+.footer__links {
+    display: grid;
+    row-gap: 1.8rem;
+}
+
+.footer__link {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+    transition: .3s;
+}
+
+.footer__copy {
+    margin-top: 7.2rem;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    margin-top: 4.5rem;
+}
+
+.footer__img-one,
+.footer__img-two  {
+    position: absolute;
+    transition: .3s;
+}
+
+.footer__img-one{
+    top:9.6rem;
+    right: -3.2rem;
+    width: 100px;
+}
+.footer__img-two{
+    width: 150px;
+    bottom: 6.4rem;
+    right: 6.4rem;
 }
 
 /* Scroll up */
@@ -366,11 +536,11 @@ button {
     opacity: .8;
 }
 
-.show-scroll{
+.show-scroll {
     bottom: 4.8rem;
 }
 
-.scrollup__icon{
+.scrollup__icon {
     font-size: 2rem;
     color: var(--title-color);
 }
@@ -379,5 +549,20 @@ button {
     .nav__list {
         flex-direction: row;
         column-gap: 3rem;
+    }
+}
+
+/* The animation code */
+@keyframes floating {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, 0);
     }
 }
