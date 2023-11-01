@@ -36,6 +36,7 @@ button {
 
     /*Green gradient*/
     --body-color: linear-gradient(90deg, hsl(104, 28%, 40%) 0%, hsl(58, 28%, 40%) 100%);
+    --container-color: linear-gradient(136deg, hsl(104, 28%, 35%) 0%, hsl(58, 28%, 35%) 100%);
 
 
     /*========== Font weight ==========*/
@@ -44,13 +45,13 @@ button {
     --font-black: 900;
 
     /*========== Margenes Bottom ==========*/
-    --mb-0-25: .25rem;
+    --mb-0-25: 0.4rem;
     --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
+    --mb-0-75: 1.2rem;
     --mb-1: 1.6rem;
     --mb-1-5: 2.4rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
+    --mb-2: 3.2rem;
+    --mb-2-5: 4rem;
 
     /*========== z index ==========*/
     --z-tooltip: 10;
@@ -79,6 +80,10 @@ h1, h2, h3, h4 {
     font-weight: var(--font-semi-bold);
 }
 
+h3 {
+    font-size: 1.8rem;
+}
+
 ul {
     list-style: none;
 }
@@ -104,6 +109,10 @@ button {
     font-size: var(--normal-font-size);
 }
 
+.section {
+    padding: 7.2rem 0 3.2rem;
+}
+
 .nav-btn {
     border: 1px solid #fff;
     color: var(--title-color);
@@ -122,7 +131,7 @@ button {
     border-radius: 0.8rem;
     color: var(--title-color);
     font-weight: var(--font-medium);
-    transition: .3s;
+    /* transition: .3s; */
     max-width: var(--width);
     max-height: var(--height);
     line-height: 1.4rem;
@@ -295,8 +304,9 @@ button {
     margin-top: var(--mb-1);
     justify-content: center;
     align-items: center;
-    transition: .3s opacity;
-    transform: translate3d(0,0,0);
+    /* transition: .3s opacity; */
+    /* transform: translate3d(0, 0, 0); */
+    padding-bottom: 5px;
 }
 
 .home__slider-dot {
@@ -308,9 +318,61 @@ button {
 
 }
 
-.home__slider-dot--active{
+.home__slider-dot--active {
     width: 24px;
     border-radius: 8px;
+}
+
+.section__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-2);
+    text-align: center;
+    line-height: 1.4;
+}
+
+.category__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.6rem 3.2rem;
+}
+
+.category__item {
+    text-align: center;
+}
+
+.category__img {
+    width: 120px;
+    margin-bottom: var(--mb-0-75);
+}
+
+.category__title {
+    margin-bottom: var(--mb-0-25);
+}
+
+.category__desc {
+    line-height: 1.4;
+}
+
+/* Scroll up */
+.scrollup {
+    position: fixed;
+    bottom: -20%;
+    right: 1.6rem;
+    background: var(--container-color);
+    display: inline-flex;
+    padding: 0.48rem;
+    border-radius: 0.4rem;
+    z-index: var(--z-tooltip);
+    opacity: .8;
+}
+
+.show-scroll{
+    bottom: 4.8rem;
+}
+
+.scrollup__icon{
+    font-size: 2rem;
+    color: var(--title-color);
 }
 
 @media screen and (min-width: 767px) {
