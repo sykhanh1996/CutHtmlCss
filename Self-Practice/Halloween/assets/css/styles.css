@@ -24,7 +24,7 @@ button {
     --biggest-font-size: 3.2rem;
     --h1-font-size: 2.4rem;
     --h2-font-size: 2rem;
-    --h3-font-size: 1.6rem;
+    --h3-font-size: 2.56rem;
 
     /*========== Colors ==========*/
     --hue: 14;
@@ -56,6 +56,7 @@ button {
     /*========== z index ==========*/
     --z-tooltip: 10;
     --z-fixed: 100;
+    --z-home-image: 101;
 }
 
 html {
@@ -423,7 +424,7 @@ button {
 
 .trick__subtitle {
     font-size: var(--smaller-font-size);
-    margin-bottom: var(--mb-0-5);
+
 }
 
 .trick__button {
@@ -561,8 +562,32 @@ button {
 }
 
 @media screen and (min-width: 767px) {
+    :root {
+        --biggest-font-size: 6.4rem;
+        --h1-font-size: 3.6rem;
+        --h2-font-size: 2.4rem;
+        --h3-font-size: 2rem;
+        --small-font-size: .875rem;
+        --mb-0-5: 1.4rem;
+        --mb-1: 4rem;
+    }
+
+    .section__title {
+        font-size: var(--h1-font-size);
+        margin-bottom: 4.8rem;
+    }
+
+    .nav__img,
+    .nav__toggle {
+        display: none;
+    }
+
+    .nav__list--smallScreen {
+        display: flex;
+    }
+
     .nav {
-        padding: 24px 0 64px;
+        padding: 12px 0;
     }
 
     .nav__list {
@@ -575,12 +600,116 @@ button {
         font-size: 1.6rem;
     }
 
+    .home {
+        padding-top: 43px;
+    }
+
+    .home__list {
+        margin-bottom: 72px;
+    }
+
     .home__item {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
         gap: 4.8rem;
         /* flex-shrink: 0; */
+    }
+
+    .home__group {
+        padding: 0 0 7.9rem;
+
+    }
+
+    .home__img {
+        height: 420px;
+    }
+
+    .home__indicator {
+        top: initial;
+        right: initial;
+        bottom: 7.5rem;
+        left: 45%;
+    }
+
+    .home__indicator::before {
+        top: 0;
+        height: 80px;
+    }
+
+    .home__details-img {
+        bottom: 0;
+        right: 58%;
+    }
+
+    .home__content {
+        padding-top: 50px;
+    }
+
+    .home__description {
+        padding-right: 3.2rem;
+    }
+
+    .category__list {
+        grid-template-columns: repeat(3, 200px);
+        column-gap: 12.8rem;
+        justify-content: center;
+    }
+
+    .category__img {
+        width: 200px;
+    }
+
+    .about__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .about__data,
+    .about__title {
+        text-align: initial;
+    }
+
+    .about__title {
+        font-size: var(--h1-font-size);
+        margin-bottom: 4.8rem;
+    }
+
+    .about__desc {
+        padding-right: 3.2rem;
+        line-height: 1.9;
+    }
+
+    .about__img {
+        width: 350px;
+    }
+
+    .trick__item {
+        border-radius: 2.4rem;
+    }
+
+    .trick__list {
+        grid-template-columns: repeat(3, 200px);
+        justify-content: center;
+        gap: 5.6rem;
+        padding-top: 1.6rem;
+    }
+
+    .trick__img {
+        width: 110px;
+    }
+
+    .trick__title,
+    .trick__price {
+        font-size: var(--h3-font-size);
+        margin-bottom: 3px;
+    }
+
+    .trick__subtitle {
+        font-size: var(--smaller-font-size);
+
+        margin-bottom: var(--mb-0-5);
     }
 }
 
@@ -589,18 +718,6 @@ button {
     .container {
         margin-left: auto;
         margin-right: auto;
-    }
-}
-
-@media screen and (min-width: 767px) {
-
-    .nav__img,
-    .nav__toggle {
-        display: none;
-    }
-
-    .nav__list--smallScreen {
-        display: flex;
     }
 }
 
