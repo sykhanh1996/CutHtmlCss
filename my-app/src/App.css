@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+.floating-label-input {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.floating-label-input label {
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  transition: 0.3s ease all;
+  pointer-events: none;
+  color: #aaa;
+}
+
+.floating-label-input.focused label,
+.floating-label-input.filled label {
+  top: -20px;
+  font-size: 12px;
+  color: #1890ff;
+}
