@@ -11,7 +11,7 @@ import {
   FloatingLabelInput4,
 } from "./FloatingLabel/FloatingLabel";
 import { FloatingLabelWrapper } from "./FloatingLabel/FloatingInput";
-import { Input } from "antd";
+import { Form, Input } from "antd";
 
 function App() {
   return (
@@ -25,9 +25,16 @@ function App() {
       <FloatingLabelInput label="Username2" name="username2" />
       <FloatingLabelInput3 label="Username3" name="username3" />
       <FloatingLabelInput4 label="Username4" name="username4" />
-      <FloatingLabelWrapper label="Username" name="username">
-        <Input />
-      </FloatingLabelWrapper>{" "}
+      <Form.Item name="gender" label="Gender">
+        <FloatingLabelWrapper label="Username" name="username">
+          <Input />
+        </FloatingLabelWrapper>
+      </Form.Item>
+      {/* <FloatingLabelWrapper>
+        <Form.Item name="gender" label="Gender">
+          <Input />
+        </Form.Item>
+      </FloatingLabelWrapper> */}
     </div>
   );
 }
