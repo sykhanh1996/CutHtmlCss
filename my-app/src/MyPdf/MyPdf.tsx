@@ -10,31 +10,36 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 ).toString();
 export function Mypdf() {
   const [numPages, setNumPages] = useState(1);
-  const [pageNumber, setPageNumber] = useState(1); // Set this to the page number you want to navigate to
+  const [pageNumber, setPageNumber] = useState(1);
+  const [scale, setScale] = useState(1.0);
 
   function onDocumentLoadSuccess({ numPages }: { numPages: number }) {
     setNumPages(numPages);
   }
 
-  function goToPreviousPage() {
-    setPageNumber((prevPageNumber) => prevPageNumber - 1);
+  function zoomIn() {
+    setScale((prevScale) => prevScale + 0.1);
   }
 
-  function goToNextPage() {
-    setPageNumber((prevPageNumber) => prevPageNumber + 1);
+  function zoomOut() {
+    setScale((prevScale) => prevScale - 0.1);
   }
+
+  function download() {
+    window.open(testPdf, "_blank");
+  }
+
   return (
     <div>
       <Document file={testPdf} onLoadSuccess={onDocumentLoadSuccess}>
-        <Page pageNumber={pageNumber} />
+        <Page pageNumber={pageNumber} scale={scale} />
       </Document>
       <div>
-        <button onClick={goToPreviousPage} disabled={pageNumber <= 1}>
-          Previous
+        <button onClick={zoomIn}>Zoom In</button>
+        <button onClick={zoomOut} disabled={scale <= 0.1}>
+          Zoom Out
         </button>
-        <button onClick={goToNextPage} disabled={pageNumber >= numPages}>
-          Next
-        </button>
+        <button onClick={download}>Download</button>
       </div>
       <p>
         Page {pageNumber} of {numPages}
