@@ -1,6 +1,9 @@
 import { Button, DatePicker, Form, Input, Select, TreeSelect } from "antd";
 import Mypdf from "./MyPdf";
-import FloatLabel, { FloatLabel2 } from "./WrapperLabel/FloatLabel";
+import FloatLabel, {
+  FloatLabel2,
+  FloatLabel3,
+} from "./WrapperLabel/FloatLabel";
 import { useState } from "react";
 import { FloatingLabelWrapper } from "./FloatingLabel/FloatingInput";
 
@@ -32,7 +35,24 @@ function App() {
     <div className="container mx-auto mt-5">
       <div className="grid grid-cols-2">
         <div>LeftMenu</div>
-        <Mypdf />
+        {/* <Mypdf /> */}
+        <Form>
+          <Form.Item label="First Name">
+            <div>
+              <DatePicker />
+            </div>
+          </Form.Item>
+        </Form>
+
+        <FloatLabel2 label="test" name="test" form={form}>
+          <DatePicker />
+        </FloatLabel2>
+
+        <Form.Item noStyle name="test">
+          <FloatLabel3 label="testiy" placeholder="test">
+            <DatePicker placeholder="" bordered={false} />
+          </FloatLabel3>
+        </Form.Item>
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { ReactElement, useState } from "react";
 import "./index.css";
 import React from "react";
-import { FormInstance } from "antd";
+import { FormInstance, Input, InputProps } from "antd";
 
 interface Props {
   label: string;
@@ -58,6 +58,62 @@ export const FloatLabel2 = (props: Props2) => {
         placeholder: label,
       })}
       <label className={labelClass}>{label}</label>
+    </div>
+  );
+};
+
+interface Props3 {
+  label?: string;
+  placeholder?: string;
+  children: React.ReactNode;
+}
+export const FloatLabel3 = (props: Props3) => {
+  const { label = "", placeholder = "", children } = props;
+
+  const [focus, setFocus] = useState(false);
+
+  const labelClass = focus
+    ? "font-normal absolute pointer-events-none left-3 top-3 transition-all duration-200 ease-in-out top-[-8px] text-xs bg-white px-1 -ml-1"
+    : "font-normal absolute pointer-events-none left-3 top-2 transition-all duration-200 ease-in-out text-gray-500"; //focus : not focus
+
+  return (
+    <div
+      className="relative border border-gray-300"
+      onBlur={() => setFocus(false)}
+      onFocus={() => setFocus(true)}
+    >
+      {children}
+      <label className={labelClass}>{label}</label>
+    </div>
+  );
+};
+
+interface Props4 extends InputProps{
+  label?: string;
+  defaultValue?: any;
+}
+export const FloatInput = (props: Props4) => {
+  const [focus, setFocus] = useState(false);
+  let { label, value, placeholder, type, required, defaultValue } = props;
+
+  if (!placeholder) placeholder = label;
+
+  const isOccupied = focus || (value && value.length !== 0);
+
+  const labelClass = isOccupied ? "label as-label" : "label as-placeholder";
+
+  const requiredMark = required ? <span className="text-danger">*</span> : null;
+
+  return (
+    <div
+      className="float-label"
+      onBlur={() => setFocus(false)}
+      onFocus={() => setFocus(true)}
+    >
+      <Input onChange={props.onChange} type={type} defaultValue={value} />
+      <label className={labelClass}>
+        {isOccupied ? label : placeholder} {requiredMark}
+      </label>
     </div>
   );
 };
