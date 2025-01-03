@@ -11,4 +11,6 @@ function App() {
   )
 }
 
+const test1 = 'test1'
+
 export default App
